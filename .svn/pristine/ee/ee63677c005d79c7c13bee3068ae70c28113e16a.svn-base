@@ -1,0 +1,82 @@
+#source config
+#P6Spy监控请使用第二个驱动
+jdbc.driverClassName=oracle.jdbc.driver.OracleDriver
+#jdbc.driverClassName=com.p6spy.engine.spy.P6SpyDriver
+
+#Jndi使用下边配置
+dataSource.jndiName=java:comp/env/jdbc/tetaDB
+
+#连接池通用url配置10.180.230.6  192.168.0.55
+jdbc.url=jdbc:oracle:thin:@10.180.230.6:1521:orcl
+jdbc.username=ktl_tim_mis
+jdbc.password=love431
+
+#DBCP连接池配置
+jdbc.maxActive=100
+jdbc.maxIdle=15
+jdbc.maxWait=10000
+jdbc.defaultAutoCommit=false
+jdbc.removeAbandoned=true
+jdbc.removeAbandonedTimeout=30
+jdbc.logAbandoned=true
+jdbc.initialSize=10
+
+#proxool连接池配置
+jdbc.alias=lasunDs
+jdbc.houseKeepingSleepTime=90000
+jdbc.maximumActiveTime=360000000
+jdbc.maximumConnectionLifetime=360000000
+#生产环境下建议可修改为50~100
+jdbc.prototypeCount=2
+jdbc.maximumConnectionCount=80
+jdbc.minimumConnectionCount=2
+jdbc.simultaneousBuildThrottle=100
+
+
+#c3p0连接池配置
+# Time to wait for an open connection before timing out
+# (in milliseconds)
+cpool.checkoutTimeout=10000
+
+# Connection pool size
+cpool.minPoolSize=15
+cpool.maxPoolSize=200
+
+# How long to keep unused connections around(in seconds)
+# Note: MySQL times out idle connections after 8 hours(28,800 seconds)
+# so ensure this value is below MySQL idle timeout
+cpool.maxIdleTime=25200
+
+# How long to hang on to excess unused connections after traffic spike
+# (in seconds)
+cpool.maxIdleTimeExcessConnections=1800
+
+# Acquiring new connections is slow, so eagerly retrieve extra connections
+# when current pool size is reached
+cpool.acquireIncrement=5
+
+#############################
+
+#检查数据库连接池中空闲连接的间隔时间，单位是分，默认值：240，如果要取消则设置为0
+aliLibrary.db.idleConnectionTestPeriod=10
+
+#连接池中未使用的链接最大存活时间，单位是分，默认值：60，如果要永远存活设置为0
+aliLibrary.db.idleMaxAge=10
+
+#每个分区最大的连接数 
+aliLibrary.db.maxConnectionsPerPartition=30
+
+#每个分区最小的连接数
+aliLibrary.db.minConnectionsPerPartition=3
+
+#分区数 ，默认值2，最小1，推荐3-4，视应用而定
+aliLibrary.db.partitionCount=4
+
+#每次去拿数据库连接的时候一次性要拿几个,默认值：2
+aliLibrary.db.acquireIncrement=2
+
+#缓存prepared statements的大小，默认值：0
+aliLibrary.db.statementsCacheSize=0
+
+#每个分区释放链接助理进程的数量，默认值：3，除非你的一个数据库连接的时间内做了很多工作，不然过多的助理进程会影响你的性能
+aliLibrary.db.releaseHelperThreads=3

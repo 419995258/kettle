@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="base.login" namespace="/login" extends="custom-default">
+	
+		<action name="Login/*" method="{1}" class="org.my431.base.web.LoginAction">
+			<result name="*" type="direct">通过Action直接返回，这一行无需修改</result>
+			<result name="error">error.jsp</result>
+			<result name="invalid.token">error.jsp?message=重复提交</result>
+		</action>
+		
+	</package>
+	
+	<package name="base" namespace="/base" extends="custom-default">
+	
+		<action name="*/*" method="{2}" class="org.my431.base.web.{1}Action">
+			<result name="*" type="direct">通过Action直接返回，这一行无需修改</result>
+			<result name="error">error.jsp</result>
+			<result name="invalid.token">error.jsp?message=重复提交</result>
+		</action>
+		
+	</package>
+		
+</struts>

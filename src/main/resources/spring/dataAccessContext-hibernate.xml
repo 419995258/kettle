@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans default-autowire="byName" default-lazy-init="true">
+
+	<!-- 数据源定义,使用Apache DBCP 连接池 >
+	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean"> 
+		<property name="driverClassName" value="${jdbc.driverClassName}"/>
+		<property name="url" value="${jdbc.url}"/>
+		<property name="username" value="${jdbc.username}"/>
+		<property name="password" value="${jdbc.password}"/>
+		<property name="maxActive" value="${jdbc.maxActive}" />  
+	    <property name="maxIdle" value="${jdbc.maxIdle}" />  
+	    <property name="maxWait" value="${jdbc.maxWait}" /> 	
+	    <property name="defaultAutoCommit" value="${jdbc.defaultAutoCommit}"/>  
+	    <property name="removeAbandoned" value="${jdbc.removeAbandoned}"/>  
+	    <property name="removeAbandonedTimeout" value="${jdbc.removeAbandonedTimeout}"/>  
+	    <property name="logAbandoned" value="${jdbc.logAbandoned}"/>
+	    <property name="initialSize" value="${jdbc.initialSize}"/>
+	</bean-->
+
+	<!-- 数据源定义,使用proxool连接池 -->
+	<!--bean id="dataSource" class="org.logicalcobwebs.proxool.ProxoolDataSource" destroy-method="close">
+		<property name="driver" value="${jdbc.driverClassName}" />
+		<property name="driverUrl" value="${jdbc.url}" />
+		<property name="user" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+		<property name="alias" value="${jdbc.alias}" />
+		<property name="houseKeepingSleepTime" value="${jdbc.houseKeepingSleepTime}" />
+		<property name="maximumActiveTime" value="${jdbc.maximumActiveTime}" />
+		<property name="maximumConnectionLifetime" value="${jdbc.maximumConnectionLifetime}" />
+		<property name="prototypeCount" value="${jdbc.prototypeCount}" />
+		<property name="maximumConnectionCount" value="${jdbc.maximumConnectionCount}" />
+		<property name="minimumConnectionCount" value="${jdbc.minimumConnectionCount}" />
+		<property name="simultaneousBuildThrottle" value="${jdbc.simultaneousBuildThrottle}" />
+		<property name="trace" value="true" />
+		<property name="verbose" value="true" />
+	</bean-->
+	
+	<!-- 数据源定义,使用c3p0连接池 
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+        <property name="driverClass" value="${jdbc.driverClassName}" />
+        <property name="jdbcUrl" value="${jdbc.url}" />
+        <property name="user" value="${jdbc.username}" />
+        <property name="password" value="${jdbc.password}" />
+        <property name="autoCommitOnClose" value="true"/>
+        <property name="checkoutTimeout" value="${cpool.checkoutTimeout}"/>
+        <property name="initialPoolSize" value="${cpool.minPoolSize}"/>
+        <property name="minPoolSize" value="${cpool.minPoolSize}"/>
+        <property name="maxPoolSize" value="${cpool.maxPoolSize}"/>
+        <property name="maxIdleTime" value="${cpool.maxIdleTime}"/>
+        <property name="acquireIncrement" value="${cpool.acquireIncrement}"/>
+        <property name="maxIdleTimeExcessConnections" value="${cpool.maxIdleTimeExcessConnections}"/>
+  </bean>
+  -->
+  <!--bonecp 连接池-->
+  <bean id="dataSource" class="com.jolbox.bonecp.BoneCPDataSource"  
+        destroy-method="close">  
+        <property name="driverClass" value="${jdbc.driverClassName}" />  
+        <property name="jdbcUrl" value="${jdbc.url}" />  
+        <property name="username" value="${jdbc.username}" />  
+        <property name="password" value="${jdbc.password}" />  
+        <property name="idleConnectionTestPeriod" value="${aliLibrary.db.idleConnectionTestPeriod}" />  
+        <property name="idleMaxAge" value="${aliLibrary.db.idleMaxAge}" />  
+        <property name="maxConnectionsPerPartition" value="${aliLibrary.db.maxConnectionsPerPartition}" />  
+        <property name="minConnectionsPerPartition" value="${aliLibrary.db.minConnectionsPerPartition}" />  
+        <property name="partitionCount" value="${aliLibrary.db.partitionCount}" />  
+        <property name="acquireIncrement" value="${aliLibrary.db.acquireIncrement}" />  
+        <property name="statementsCacheSize" value="${aliLibrary.db.statementsCacheSize}" />  
+        <property name="releaseHelperThreads" value="${aliLibrary.db.releaseHelperThreads}" /> 
+        <property name="disableConnectionTracking" value="true" />
+    </bean>
+	
+	<!--Hibernate SessionFatory-->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="configLocations">
+			<list>
+				<value>classpath*:/config/hibernate.cfg.*.xml</value>
+			</list>
+		</property>
+		<property name="configurationClass" value="org.hibernate.cfg.AnnotationConfiguration"/>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+				<prop key="hibernate.format_sql">true</prop>
+				<prop key="hibernate.cache.use_query_cache">${hibernate.cache.use_query_cache}</prop>
+				<prop key="hibernate.cache.provider_class">${hibernate.cache.provider_class}</prop>
+				<prop key="hibernate.autoReconnect">true</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!--Hibernate TransactionManager-->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+</beans>

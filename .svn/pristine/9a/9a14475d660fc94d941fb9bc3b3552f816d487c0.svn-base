@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="GBK"?>
+<configs>
+	  <uploadUrl>http://localhost:8080/upload</uploadUrl>
+	  <physicalUploadUrl>D:/workspace/projects/gseprojects/mis/mis_upload/trunk/webapp</physicalUploadUrl>
+	  <studioNoteUrl>/upload/noteAttachment/</studioNoteUrl>
+	  <userPhoto>upload/userPhoto</userPhoto>
+	  <schoolPhoto>upload/schoolPhoto</schoolPhoto>
+</configs>

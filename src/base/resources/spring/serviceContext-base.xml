@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans default-autowire="byName" default-lazy-init="false">
+	<bean id="redisManager" class="org.my431.plugin.redis.services.RedisManager"/>
+	<bean id="baseCacheManager" class="org.my431.base.services.BaseCacheManager"/>
+	<bean id="baseKpiGroupManager" class="org.my431.base.services.BaseKpiGroupManager"/>
+	<bean id="baseKpiItemManager" class="org.my431.base.services.BaseKpiItemManager"/>
+	<bean id="baseAreaManager"  class="org.my431.base.services.BaseAreaManager"/>
+	<bean id="baseLoginManager" class="org.my431.base.services.BaseLoginManager"/>
+	<bean id="basePropertiesGroupManager"  class="org.my431.base.services.BasePropertiesGroupManager"/>
+	<bean id="basePropertiesManager"   class="org.my431.base.services.BasePropertiesManager"/>
+	<bean id="baseRoleManager"   class="org.my431.base.services.BaseRoleManager"/>
+	<bean id="baseSchoolManager" class="org.my431.base.services.BaseSchoolManager"/>
+	<bean id="baseSchoolFsbManager" class="org.my431.base.services.BaseSchoolFsbManager"/>
+	<bean id="baseUserManager" class="org.my431.base.services.BaseUserManager"/>
+	<bean id="baseQueryManager" class="org.my431.base.services.BaseQueryManager"/>
+	<bean id="baseModuleManager"    class="org.my431.base.services.BaseModuleManager"/>
+	<bean id="baseUrlManager"   class="org.my431.base.services.BaseUrlManager"/>
+	<bean id="baseRoleUrlMapManager"   class="org.my431.base.services.BaseRoleUrlMapManager"/>
+	<bean id="statLoginDataManager" class="org.my431.base.services.StatLoginDataManager"/>
+	<bean id="statSchoolManager" class="org.my431.base.services.StatSchoolManager"/>
+	<bean id="baseNoteManager"  class="org.my431.base.services.BaseNoteManager"/>
+	
+	<bean id="base3rdInstitutionManager" class="org.my431.base.services.Base3rdInstitutionManager"/>
+	<bean id="baseCreditProjectManager" class="org.my431.base.services.BaseCreditProjectManager"/>
+	<bean id="baseCreditTransRuleManager" class="org.my431.base.services.BaseCreditTransRuleManager"/>
+	<bean id="baseModLogManager" class="org.my431.base.services.BaseModLogManager"/>
+	<bean id="baseProAmountDistributeManager" class="org.my431.base.services.BaseProAmountDistributeManager"/>
+	<bean id="baseProTeacherMapManager" class="org.my431.base.services.BaseProTeacherMapManager"/>
+	<bean id="baseTeacherCreditsSumManager" class="org.my431.base.services.BaseTeacherCreditsSumManager"/>
+	<bean id="baseToDoManager" class="org.my431.base.services.BaseToDoManager"/>
+	<bean id="baseUserSheetMapManager" class="org.my431.base.services.BaseUserSheetMapManager"/>
+	<bean id="baseBusinessStepManager" class="org.my431.base.services.BaseBusinessStepManager"/>
+	<bean id="baseTeacherCerifiyManager" class="org.my431.base.services.BaseTeacherCerifiyManager"/>
+	<bean id="baseProjectFileManager" class="org.my431.base.services.BaseProjectFileManager"/>
+	<bean id="baseUserMisManager" class="org.my431.base.services.BaseUserMisManager"/>
+	<bean id="baseCycleApprovalManager" class="org.my431.base.services.BaseCycleApprovalManager"/>
+	<bean id="baseNdModFieldManager" class="org.my431.base.services.BaseNdModFieldManager"/>
+	<bean id="baseNoteAttachmentManager" class="org.my431.base.services.BaseNoteAttachmentManager"/>
+	
+	
+	<bean id="baseTableUpdateLogManager" class="org.my431.base.services.BaseTableUpdateLogManager"/>
+</beans>

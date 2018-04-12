@@ -1,0 +1,3 @@
+email.defaultHost=smtp.exmail.qq.com
+email.defaultFrom=service@cbern.com.cn
+email.defaultPwd=123qwe234wer

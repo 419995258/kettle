@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+  version="2.0">
+    
+  <description>my431 functions library</description>
+  <display-name>my431 functions</display-name>
+  <tlib-version>1.1</tlib-version>
+  <short-name>my431-fn</short-name>
+  <uri></uri>
+
+  <function>
+    <description>
+      This function get the property value by key.
+    </description>
+    <name>getValueByCode</name>
+    <function-class>org.my431.taglib.My431Function</function-class>
+    <function-signature>java.lang.String getValueByCode(java.lang.String)</function-signature>
+    <example>
+      ${my431fn:getValueByCode(key)}
+    </example>
+  </function>
+
+  
+  <function>
+    <description>
+      This function get the role value by key.
+    </description>
+    <name>getRoleByCode</name>
+    <function-class>org.my431.taglib.My431Function</function-class>
+    <function-signature>java.lang.String getRoleByCode(java.lang.String)</function-signature>
+    <example>
+      ${my431fn:getRoleByCode(key)}
+    </example>
+  </function>
+  
+  <function>
+    <description>
+      This function get the areaName value by id.
+    </description>
+    <name>getAreaNameById</name>
+    <function-class>org.my431.taglib.My431Function</function-class>
+    <function-signature>java.lang.String getAreaNameById(java.lang.String)</function-signature>
+    <example>
+      ${my431fn:getAreaNameById(key)}
+    </example>
+  </function>
+  
+  <function>
+    <description>
+      This function get the school name by id.
+    </description>
+    <name>getSchoolNameById</name>
+    <function-class>org.my431.taglib.My431Function</function-class>
+    <function-signature>java.lang.String getSchoolNameById(java.lang.String)</function-signature>
+    <example>
+      ${my431fn:getSchoolNameById(id)}
+    </example>
+  </function> 
+  
+    <function>
+    <description>
+      This function get the school  areaId  by id.
+    </description>
+    <name>getAreaIdNameBySchoolId</name>
+    <function-class>org.my431.taglib.My431Function</function-class>
+    <function-signature>java.lang.String getAreaIdNameBySchoolId(java.lang.String)</function-signature>
+    <example>
+      ${my431fn:getAreaIdNameBySchoolId(id)}
+    </example>
+  </function> 
+  
+  <function>
+    <description>
+      This function getAreaByIdOne.
+    </description>
+    <name>getAreaByIdOne</name>
+    <function-class>org.my431.taglib.My431Function</function-class>
+    <function-signature>org.my431.base.model.BaseArea getAreaByIdOne(java.lang.String)</function-signature>
+    <example>
+      ${my431fn:getAreaByIdOne(id)}
+    </example>
+  </function> 
+   
+  <function>
+    <description>
+      This function getAreaByCodeOne.
+    </description>
+    <name>getAreaByCodeOne</name>
+    <function-class>org.my431.taglib.My431Function</function-class>
+    <function-signature>org.my431.base.model.BaseArea getAreaByCodeOne(java.lang.String)</function-signature>
+    <example>
+      ${my431fn:getAreaByCodeOne(code)}
+    </example>
+  </function> 
+    
+  <function>
+    <description>
+      This function getBaseUrlList.
+    </description>
+    <name>getBaseUrlList</name>
+    <function-class>org.my431.taglib.My431Function</function-class>
+    <function-signature>java.util.List getBaseUrlList(java.lang.String)</function-signature>
+    <example>
+      ${my431fn:getBaseUrlList(mId)}
+    </example>
+  </function>
+    
+
+   <function>
+    <description>
+      This function getPropertiesByGroupKey
+    </description>
+    <name>getPropertiesByGroupKey</name>
+    <function-class>org.my431.taglib.My431Function</function-class>
+    <function-signature>java.util.List getPropertiesByGroupKey(java.lang.String)</function-signature>
+    <example>
+      ${my431fn:getPropertiesByGroupKey(groupKey)}
+    </example>
+  </function>
+  
+   
+
+
+ <function>
+    <description>
+      This function get the getPropertiesByCode value by id.
+    </description>
+    <name>getPropertiesByCode</name>
+    <function-class>org.my431.taglib.My431Function</function-class>
+    <function-signature>java.lang.Object getPropertiesByCode(java.lang.String)</function-signature>
+    <example>
+      ${my431fn:getPropertiesByCode(code)}
+    </example>
+  </function>
+
+   <function>
+    <description>
+      This function getSchoolById.
+    </description>
+    <name>getSchoolById</name>
+    <function-class>org.my431.taglib.My431Function</function-class>
+    <function-signature>java.lang.Object  getSchoolById(java.lang.String)</function-signature>
+    <example>
+      ${my431fn:getSchoolById(schoolId)}
+    </example>
+  </function>
+
+   <function>
+    <description>
+      This function BaseUrl
+    </description>
+    <name>getBaseUrlByUrlId</name>
+    <function-class>org.my431.taglib.My431Function</function-class>
+    <function-signature>org.my431.base.model.BaseUrl getBaseUrlByUrlId(java.lang.String)</function-signature>
+    <example>
+      ${my431fn:getBaseUrlByUrlId(key)}
+    </example>
+  </function>
+  
+  <function>
+    <description>
+      This function BaseModule
+    </description>
+    <name>getBaseModuleBymId</name>
+    <function-class>org.my431.taglib.My431Function</function-class>
+    <function-signature>org.my431.base.model.BaseModule getBaseModuleBymId(java.lang.String)</function-signature>
+    <example>
+      ${my431fn:getBaseModuleBymId(key)}
+    </example>
+  </function>
+  
+   <function>
+    <description>
+      This function get the getSqlUseNum  by id.
+    </description>
+    <name>getSqlUseNum</name>
+    <function-class>org.my431.taglib.My431Function</function-class>
+    <function-signature>java.lang.Object getSqlUseNum(java.lang.String,java.lang.Integer)</function-signature>
+    <example>
+      ${my431fn:getSqlUseNum(id,d)}
+    </example>
+  </function>  
+  
+  <function>
+    <description>
+      This function get the getBaseCreditProject  by id.
+    </description>
+    <name>getBaseCreditProject</name>
+    <function-class>org.my431.taglib.My431Function</function-class>
+    <function-signature>org.my431.base.model.BaseCreditProject getBaseCreditProject(java.lang.String)</function-signature>
+    <example>
+      ${my431fn:getBaseCreditProject(id)}
+    </example>
+  </function>  
+  
+  <!-- 将对象format成json字符串 -->
+    <function>
+        <description>将对象format成json字符串</description>
+        <name>toJsonString</name>
+        <function-class>org.my431.taglib.My431Function</function-class>
+        <function-signature>String toJsonString(java.lang.Object)</function-signature>
+        <example>${my431fn:toJsonString(value)}</example>
+    </function>  
+    
+    <function>
+        <description>获取用户</description>
+        <name>getUserById</name>
+        <function-class>org.my431.taglib.My431Function</function-class>
+        <function-signature>org.my431.base.model.BaseUser getUserById(java.lang.String)</function-signature>
+        <example>${my431fn:getUserById(value)}</example>
+    </function>
+    
+    <function>
+        <description>截取字符串</description>
+        <name>getTitle</name>
+        <function-class>org.my431.taglib.My431Function</function-class>
+        <function-signature>org.my431.base.model.BaseUser getTitle(java.lang.String,java.lang.Integer)</function-signature>
+        <example>${my431fn:getTitle(value)}</example>
+    </function>
+    <function>
+        <description>截取字符串</description>
+        <name>getTitle2</name>
+        <function-class>org.my431.taglib.My431Function</function-class>
+        <function-signature>org.my431.base.model.BaseUser getTitle2(java.lang.String,java.lang.Integer)</function-signature>
+        <example>${my431fn:getTitle2(value)}</example>
+    </function> 
+    
+    <function>
+        <description>获取学分登记的进度</description>
+        <name>getXfDjJd</name>
+        <function-class>org.my431.taglib.My431Function</function-class>
+        <function-signature>java.lang.String getXfDjJd(java.lang.String)</function-signature>
+        <example>${my431fn:getXfDjJd(value)}</example>
+    </function> 
+    
+     <function>
+        <description>获得教师资格注册进度</description>
+        <name>getTeacherCerifiyJD</name>
+        <function-class>org.my431.taglib.My431Function</function-class>
+        <function-signature>java.lang.String getTeacherCerifiyJD(java.lang.String)</function-signature>
+        <example>${my431fn:getTeacherCerifiyJD(value)}</example>
+    </function> 
+    
+    <function>
+        <description>学分结果类型code</description>
+        <name>getRResultTypeCode</name>
+        <function-class>org.my431.taglib.My431Function</function-class>
+        <function-signature>java.lang.String getRResultTypeCode(java.lang.String,java.lang.String)</function-signature>
+        <example>${my431fn:getRResultTypeCode(key1,key2)}</example>
+    </function> 
+   <function>
+        <description>学分结果类型name</description>
+        <name>getRResultTypeName</name>
+        <function-class>org.my431.taglib.My431Function</function-class>
+        <function-signature>java.lang.String getRResultTypeName(java.lang.String,java.lang.String)</function-signature>
+        <example>${my431fn:getRResultTypeName(key1,key2)}</example>
+    </function> 
+    <function>
+        <description>学分计算</description>
+        <name>getCreditResult</name>
+        <function-class>org.my431.taglib.My431Function</function-class>
+        <function-signature>java.lang.String getCreditResult(java.lang.String,java.lang.String,java.lang.String)</function-signature>
+        <example>${my431fn:getCreditResult(key1,key2,key3)}</example>
+    </function>
+    
+    <function>
+        <description>缓存获取所有的kpiGroup </description>
+        <name>getKpiGroupListRedis</name>
+        <function-class>org.my431.taglib.My431Function</function-class>
+        <function-signature>org.my431.base.model.BaseKpiGroup getKpiGroupListRedis()</function-signature>
+        <example>${my431fn:getKpiGroupListRedis()}</example>
+    </function>
+    
+    <function>
+    <description>
+      This function getPercentFloor.
+    </description>
+    <name>getPercentFloor</name>
+    <function-class>org.my431.taglib.My431Function</function-class>
+    <function-signature>java.lang.String getPercentFloor(java.lang.Integer,java.lang.Integer,java.lang.String)</function-signature>
+    <example>
+      ${my431fn:getPercentFloor(numerator,denominator,format)}
+    </example>
+  </function>
+  
+  <function>
+    <description>
+      This function getPercentFloorV2.
+    </description>
+    <name>getPercentFloorV2</name>
+    <function-class>org.my431.taglib.My431Function</function-class>
+    <function-signature>java.lang.String getPercentFloorV2(java.lang.Double,java.lang.Double,java.lang.String)</function-signature>
+    <example>
+      ${my431fn:getPercentFloorV2(numerator,denominator,format)}
+    </example>
+  </function>
+   
+   <function>
+    <description>
+      This function computeBSBorSSB.
+    </description>
+    <name>computeBSBorSSB</name>
+    <function-class>org.my431.taglib.My431Function</function-class>
+    <function-signature>java.lang.String computeBSBorSSB(java.lang.Double,java.lang.Double,java.lang.String)</function-signature>
+    <example>
+      ${my431fn:computeBSBorSSB(numerator,denominator,format)}
+    </example>
+  </function>
+  
+  <function>
+    <description>
+     	计算平均工资
+    </description>
+    <name>getAVGMoney</name>
+    <function-class>org.my431.taglib.My431Function</function-class>
+    <function-signature>java.lang.String getAVGMoney(java.lang.Double,java.lang.Double,java.lang.String)</function-signature>
+    <example>
+      ${my431fn:getAVGMoney(allMoney,cnt,format)}
+    </example>
+  </function>
+   
+   
+   <function>
+    <description>
+     	格式化数据
+    </description>
+    <name>initDate</name>
+    <function-class>org.my431.taglib.My431Function</function-class>
+    <function-signature>java.lang.String initDate(java.lang.Double)</function-signature>
+    <example>
+      ${my431fn:initDate(date)}
+    </example>
+  </function>
+  
+  <function>
+    <description>
+     	获取年月列表
+    </description>
+    <name>getDatesFromSomeDate</name>
+    <function-class>org.my431.taglib.My431Function</function-class>
+    <function-signature>java.lang.String getDatesFromSomeDate()</function-signature>
+    <example>
+      ${my431fn:getDatesFromSomeDate()}
+    </example>
+  </function>
+  
+  <function>
+    <description>
+     	获取年列表
+    </description>
+    <name>getDatesFromSomeDateYear</name>
+    <function-class>org.my431.taglib.My431Function</function-class>
+    <function-signature>java.lang.String getDatesFromSomeDateYear()</function-signature>
+    <example>
+      ${my431fn:getDatesFromSomeDateYear()}
+    </example>
+  </function>
+  <function>
+    <description>
+      This function get the username
+    </description>
+    <name>getUserName</name>
+    <function-class>org.my431.taglib.My431Function</function-class>
+    <function-signature>java.lang.String getUserName(java.lang.String)</function-signature>
+    <example>
+      ${my431fn:getUserName(str)}
+    </example>
+  </function>
+   <function>
+    <description>
+      This function getformatTime.
+    </description>
+    <name>getformatTime</name>
+    <function-class>org.my431.taglib.My431Function</function-class>
+    <function-signature>java.lang.String  getformatTime(java.lang.String)</function-signature>
+    <example>
+      ${my431fn:getformatTime(key)}
+    </example>
+  </function>
+   <function>
+    <description>
+      This function get oracleClob2Str
+    </description>
+    <name>oracleClob2Str</name>
+    <function-class>org.my431.taglib.My431Function</function-class>
+    <function-signature>java.lang.String oracleClob2Str(java.sql.Clob)</function-signature>
+    <example>
+      ${my431fn:oracleClob2Str(key)}
+    </example>
+  </function>
+   <function>
+    <description>
+      This function getFormatHtml.
+    </description>
+    <name>getFormatHtml</name>
+    <function-class>org.my431.taglib.My431Function</function-class>
+    <function-signature>java.lang.String getFormatHtml(java.lang.String)</function-signature>
+    <example>
+      ${my431fn:getFormatHtml(html)}
+    </example>
+  </function> 
+  
+  <function>
+    <description>
+     对数据结果进行修改，空或0改为'-'
+    </description>
+    <name>changeEmptyToStr</name>
+    <function-class>org.my431.taglib.My431Function</function-class>
+    <function-signature>java.lang.String changeEmptyToStr(java.lang.String)</function-signature>
+    <example>
+      ${my431fn:changeEmptyToStr(str)}
+    </example>
+  </function> 
+</taglib>

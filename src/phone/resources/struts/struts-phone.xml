@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="phone" namespace="/phone" extends="custom-default">
+		<action name="*/*" method="{2}" class="org.my431.phone.web.{1}Action">
+			<result name="*" type="direct">通过Action直接返回，这一行无需修改</result>
+			<result name="error">error.jsp</result>
+			<result name="invalid.token">error.jsp?message=重复提交</result>
+		</action>
+	</package>
+</struts>

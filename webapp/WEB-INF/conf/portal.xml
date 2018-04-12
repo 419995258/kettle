@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="GBK"?>
+<configs>
+  <portalUrl>http://localhost:8080/portal</portalUrl>
+  <baseUrl>http://localhost:8080/base</baseUrl>
+</configs>

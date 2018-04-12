@@ -1,0 +1,42 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<mapping class="org.my431.base.model.BaseArea"/>
+		<mapping class="org.my431.base.model.BaseCache"/>
+		<mapping class="org.my431.base.model.BaseModule"/>
+		<mapping class="org.my431.base.model.BaseNote"/>
+		<mapping class="org.my431.base.model.BaseNoteAttachment"/>	
+		<mapping class="org.my431.base.model.BaseProperties"/>
+		<mapping class="org.my431.base.model.BasePropertiesGroup"/>
+		<mapping class="org.my431.base.model.BaseQuery"/>
+		<mapping class="org.my431.base.model.BaseRole"/>
+		<mapping class="org.my431.base.model.BaseRoleUrlMap"/>
+		<mapping class="org.my431.base.model.BaseSchool"/>
+		<mapping class="org.my431.base.model.BaseSchoolFsb"/>
+		<mapping class="org.my431.base.model.BaseUrl"/>
+		<mapping class="org.my431.base.model.BaseUser"/>
+		<mapping class="org.my431.base.model.BaseKpiGroup"/>
+		<mapping class="org.my431.base.model.BaseKpiItem"/>
+		
+		<mapping class="org.my431.base.model.Base3rdInstitution"/>
+		<mapping class="org.my431.base.model.BaseCreditProject"/>
+		<mapping class="org.my431.base.model.BaseCreditTransRule"/>
+		<mapping class="org.my431.base.model.BaseModLog"/>
+		<mapping class="org.my431.base.model.BaseProAmountDistribute"/>
+		<mapping class="org.my431.base.model.BaseProTeacherMap"/>
+		<mapping class="org.my431.base.model.BaseTeacherCreditsSum"/>
+		<mapping class="org.my431.base.model.BaseToDo"/>
+		<mapping class="org.my431.base.model.BaseUserSheetMap"/>
+		<mapping class="org.my431.base.model.BaseBusinessStep"/>
+		<mapping class="org.my431.base.model.BaseTeacherCerifiy"/>
+		<mapping class="org.my431.base.model.BaseProjectFile"/>
+		<mapping class="org.my431.base.model.BaseCycleApproval"/>
+		<mapping class="org.my431.base.model.BaseNdModField"/>
+		
+		<mapping class="org.my431.base.model.BaseTableUpdateLog"/>
+		
+	</session-factory>
+</hibernate-configuration>
